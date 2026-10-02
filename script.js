@@ -56,3 +56,27 @@ sections.forEach((s) => observer.observe(s));
 
 // ===== Footer year =====
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// ===== WhatsApp contact form =====
+const waForm = document.getElementById("waForm");
+if (waForm) {
+  waForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const nameEl = document.getElementById("wfName");
+    const phoneEl = document.getElementById("wfPhone");
+    const msgEl = document.getElementById("wfMsg");
+    const name = nameEl.value.trim();
+    const phone = phoneEl.value.trim();
+    const msg = msgEl.value.trim();
+
+    if (!name) { nameEl.focus(); return; }
+    if (!msg) { msgEl.focus(); return; }
+
+    const lines = ["Hello Ajendra, this is " + name + "."];
+    if (phone) lines.push("My phone: " + phone);
+    lines.push("", msg);
+
+    const url = "https://wa.me/919691888860?text=" + encodeURIComponent(lines.join("\n"));
+    window.open(url, "_blank", "noopener");
+  });
+}

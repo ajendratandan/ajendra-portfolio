@@ -10,6 +10,13 @@
   <meta property="og:title" content="Ajendra Kumar Tandan — Operations Professional" />
   <meta property="og:description" content="10+ years in office assistance, computer operations, data management and AI automation." />
   <meta property="og:type" content="profile" />
+  <meta property="og:image" content="https://ajendra.vercel.app/assets/photo.jpg" />
+  <meta property="og:url" content="https://ajendra.vercel.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ajendra Kumar Tandan — Operations Professional" />
+  <meta name="twitter:description" content="10+ years in office assistance, computer operations, data management and AI automation." />
+  <meta name="twitter:image" content="https://ajendra.vercel.app/assets/photo.jpg" />
+  <link rel="canonical" href="https://ajendra.vercel.app/" />
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,6 +62,7 @@
       </nav>
 
       <div class="header-actions">
+        <a class="btn btn-ghost btn-resume" href="assets/Ajendra-Kumar-Tandan-Resume.pdf" target="_blank" rel="noopener" data-i18n="btn.resume">⬇ Resume</a>
         <button class="icon-btn lang-btn" id="langToggle" type="button" aria-label="हिंदी में देखें" title="हिंदी में देखें">
           <span id="langLabel" aria-hidden="true">हिं</span>
         </button>
@@ -85,25 +93,30 @@
 
         <div class="hero-cta">
           <a class="btn btn-primary" href="#contact" data-i18n="hero.hire">Hire Me</a>
+          <a class="btn btn-ghost" href="assets/Ajendra-Kumar-Tandan-Resume.pdf" target="_blank" rel="noopener" data-i18n="btn.resume">⬇ Resume</a>
           <a class="btn btn-ghost" href="https://github.com/ajendratandan" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
-
-        <ul class="hero-facts">
-          <li><span class="fact-num">10+</span><span class="fact-label" data-i18n="hero.fact1">Years Experience</span></li>
-          <li><span class="fact-num">CSC</span><span class="fact-label" data-i18n="hero.fact2">Running since 2016</span></li>
-          <li><span class="fact-num">AI</span><span class="fact-label" data-i18n="hero.fact3">Automation Tools</span></li>
-        </ul>
       </div>
 
       <div class="hero-visual">
         <div class="photo-card">
           <img src="assets/photo.jpg" alt="Portrait of Ajendra Kumar Tandan" />
           <div class="photo-badges">
-            <span class="badge" data-i18n="hero.badgeLoc">📍 Raipur, Chhattisgarh</span>
+            <span class="badge" data-i18n="hero.badgeLoc">📍 Kanki, Tilda</span>
             <span class="badge badge-green" data-i18n="hero.badgeAvail">✅ Available for work</span>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== Stats band ===== -->
+  <section class="stats-band" aria-label="Key numbers">
+    <div class="container stats-grid">
+      <div class="stat"><span class="stat-num">10+</span><span class="stat-label" data-i18n="stat.l1">Years Experience</span></div>
+      <div class="stat"><span class="stat-num">10+</span><span class="stat-label" data-i18n="stat.l2">Years Running CSC</span></div>
+      <div class="stat"><span class="stat-num">6</span><span class="stat-label" data-i18n="stat.l3">Services Offered</span></div>
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label" data-i18n="stat.l4">Live Projects</span></div>
     </div>
   </section>
 
@@ -183,7 +196,7 @@
           <ul class="contact-list">
             <li>📞 <a href="tel:+919691888860">09691888860</a></li>
             <li>✉️ <a href="mailto:ajendratandan@gmail.com">ajendratandan@gmail.com</a></li>
-            <li data-i18n="about.addr">🏠 Village – Sirri, Post – Kanki, Thana – Kharora, Block – Tilda, District – Raipur, Chhattisgarh, Pin – 493225</li>
+            <li data-i18n="about.addr">🏠 Kanki, Tilda, Raipur – 493225</li>
           </ul>
         </div>
       </div>
@@ -331,14 +344,14 @@
   <section class="section section-alt" id="projects">
     <div class="container">
       <h2 class="section-title" data-i18n="proj.title">Projects &amp; Portfolio</h2>
-      <p class="section-sub" data-i18n="proj.sub">Selected academic projects and live work.</p>
+      <p class="section-sub" data-i18n="proj.sub">Live products, websites and code I have built myself.</p>
 
       <div class="grid-3">
         <div class="card project-card">
           <span class="project-kind" data-i18n="proj.kind3">Featured Software</span>
           <h3 data-i18n="proj.h3">Data Entry Automation Software</h3>
           <p data-i18n="proj.p3">My own tooling to automate repetitive data-entry tasks and cut manual effort.</p>
-          <span class="link-arrow muted-arrow" data-i18n="proj.ask">Ask me for a demo</span>
+          <a class="link-arrow" href="case-study.html" data-i18n="proj.cs">Full case study →</a>
         </div>
 
         <a class="card project-card" href="https://ajendra.vercel.app" target="_blank" rel="noopener">
@@ -354,12 +367,52 @@
           <p data-i18n="proj.p2">Repositories, prototypes and open-source contributions.</p>
           <span class="link-arrow">github.com/ajendratandan ↗</span>
         </a>
+      </div>
+    </div>
+  </section>
 
-        <div class="card project-card">
-          <span class="project-kind" data-i18n="proj.kind7">Academic (B.E.)</span>
-          <h3 data-i18n="proj.h7">College Projects</h3>
-          <p data-i18n="proj.p7">SMS gateway for text messaging · Cloud business model with separated encryption · Crime records management system for police departments.</p>
-        </div>
+  <!-- ===== Blog ===== -->
+  <section class="section" id="blog">
+    <div class="container">
+      <h2 class="section-title" data-i18n="blog.title">Blog &amp; Guides</h2>
+      <p class="section-sub" data-i18n="blog.sub">Simple, practical guides on CSC services and everyday digital work.</p>
+
+      <div class="grid-2">
+        <a class="card project-card" href="blog/csc-certificate.html">
+          <span class="project-kind" data-i18n="blog.k1">Guide</span>
+          <h3 data-i18n="blog.t1">How to Get Certificates Made via a CSC — Simple Steps</h3>
+          <p data-i18n="blog.d1">Documents, steps and common mistakes when applying for caste, income and other certificates through a CSC.</p>
+          <span class="link-arrow" data-i18n="blog.r">Read →</span>
+        </a>
+
+        <a class="card project-card" href="blog/online-form-tips.html">
+          <span class="project-kind" data-i18n="blog.k2">Tips</span>
+          <h3 data-i18n="blog.t2">5 Tips for Filling Online Forms from Home</h3>
+          <p data-i18n="blog.d2">Photo size, document scans, drafts and payment receipts — small things that prevent big rejections.</p>
+          <span class="link-arrow" data-i18n="blog.r">Read →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials ===== -->
+  <section class="section section-alt" id="testimonials">
+    <div class="container">
+      <h2 class="section-title" data-i18n="test.title">What People Say</h2>
+      <p class="section-sub" data-i18n="test.sub">Feedback from the people and organisations I have worked with.</p>
+
+      <div class="grid-2">
+        <figure class="card test-card">
+          <div class="test-stars" aria-hidden="true">★★★★★</div>
+          <blockquote data-i18n="test.q1">"[1–2 line feedback from a customer or employer goes here]"</blockquote>
+          <figcaption data-i18n="test.n1">— Name, Role / Location</figcaption>
+        </figure>
+
+        <figure class="card test-card">
+          <div class="test-stars" aria-hidden="true">★★★★★</div>
+          <blockquote data-i18n="test.q2">"[1–2 line feedback from a customer or employer goes here]"</blockquote>
+          <figcaption data-i18n="test.n2">— Name, Role / Location</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -373,12 +426,31 @@
       <div class="contact-actions">
         <a class="btn btn-primary btn-lg" href="mailto:ajendratandan@gmail.com">✉️ ajendratandan@gmail.com</a>
         <a class="btn btn-ghost btn-lg" href="tel:+919691888860">📞 09691888860</a>
+        <a class="btn btn-wa btn-lg" href="https://wa.me/919691888860" target="_blank" rel="noopener" data-i18n="btn.wa">💬 Chat on WhatsApp</a>
+        <a class="btn btn-ghost btn-lg" href="assets/Ajendra-Kumar-Tandan-Resume.pdf" target="_blank" rel="noopener" data-i18n="btn.resume">⬇ Resume</a>
       </div>
 
-      <address class="contact-address" data-i18n="contact.addr">
-        Village – Sirri, Post – Kanki, Thana – Kharora, Block – Tilda,<br />
-        District – Raipur, Chhattisgarh, Pin – 493225
-      </address>
+      <div class="contact-grid">
+        <form class="card wa-form" id="waForm" novalidate>
+          <h3 data-i18n="form.title">Send a Message</h3>
+          <div class="form-row">
+            <input type="text" id="wfName" placeholder="Your Name / आपका नाम" autocomplete="name" required />
+            <input type="tel" id="wfPhone" placeholder="Phone / फ़ोन (optional)" autocomplete="tel" />
+          </div>
+          <textarea id="wfMsg" rows="4" placeholder="Your message / आपका संदेश" required></textarea>
+          <button class="btn btn-wa" type="submit" data-i18n="form.send">💬 Send on WhatsApp</button>
+          <p class="form-note" data-i18n="form.note">Opens WhatsApp with your message — nothing is stored on this site.</p>
+        </form>
+
+        <div class="contact-side">
+          <address class="contact-address" data-i18n="contact.addr">
+            Kanki, Tilda, Raipur – 493225
+          </address>
+          <div class="map-wrap">
+            <iframe title="Location map — Kanki, Tilda, Raipur" src="https://maps.google.com/maps?q=Kanki%2C%20Tilda%2C%20Raipur%2C%20Chhattisgarh&amp;z=13&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -393,6 +465,10 @@
       </div>
     </div>
   </footer>
+
+  <a class="wa-float" href="https://wa.me/919691888860" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <span aria-hidden="true">💬</span> <span data-i18n="wa.float">WhatsApp</span>
+  </a>
 
   <script src="i18n.js"></script>
   <script src="script.js"></script>
