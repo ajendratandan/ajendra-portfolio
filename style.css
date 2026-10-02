@@ -446,3 +446,22 @@ html[data-theme="dark"] .edu-table thead th { color: #0b1120; }
 @media print {
   .wa-float, .stats-band, .contact-grid, .map-wrap { display: none !important; }
 }
+
+/* ===== Footer social icons ===== */
+.footer-right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+.social-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.social-ico {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--brand, #475569);
+  display: grid; place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease;
+}
+.social-ico:hover { transform: translateY(-2px); text-decoration: none; }
+.social-ico img { width: 16px; height: 16px; filter: brightness(0) invert(1); display: block; }
+
+@media (max-width: 720px) {
+  .footer-right { align-items: center; width: 100%; }
+  .social-row { justify-content: center; }
+}
