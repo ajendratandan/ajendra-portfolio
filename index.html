@@ -13,7 +13,7 @@
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script type="application/ld+json">
   {
@@ -46,14 +46,17 @@
       </a>
 
       <nav class="nav" id="nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#experience" data-i18n="nav.experience">Experience</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
 
       <div class="header-actions">
+        <button class="icon-btn lang-btn" id="langToggle" type="button" aria-label="हिंदी में देखें" title="हिंदी में देखें">
+          <span id="langLabel" aria-hidden="true">हिं</span>
+        </button>
         <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle theme">
           <span class="theme-ico" aria-hidden="true">◐</span>
         </button>
@@ -68,27 +71,26 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-copy">
-        <p class="eyebrow">👋 Namaste — I'm</p>
-        <h1>Ajendra Kumar Tandan</h1>
+        <p class="eyebrow" data-i18n="hero.eyebrow">👋 Namaste — I'm</p>
+        <h1 data-i18n="hero.name">Ajendra Kumar Tandan</h1>
         <p class="hero-role">
-          Operations Professional · Computer Operator ·
-          <span class="accent">AI &amp; Automation</span>
+          <span data-i18n="hero.roleMain">Operations Professional · Computer Operator · </span><span class="accent" data-i18n="hero.roleAccent">AI &amp; Automation</span>
         </p>
-        <p class="hero-lead">
+        <p class="hero-lead" data-i18n="hero.lead">
           10+ years in office assistance, computer operations and data management.
           I use AI tools and automation to streamline day-to-day administrative work —
           from clerical workflows to browser and software automation.
         </p>
 
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#contact">Hire Me</a>
+          <a class="btn btn-primary" href="#contact" data-i18n="hero.hire">Hire Me</a>
           <a class="btn btn-ghost" href="https://github.com/ajendratandan" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
 
         <ul class="hero-facts">
-          <li><span class="fact-num">10+</span><span class="fact-label">Years Experience</span></li>
-          <li><span class="fact-num">CSC</span><span class="fact-label">Running since 2016</span></li>
-          <li><span class="fact-num">AI</span><span class="fact-label">Automation Tools</span></li>
+          <li><span class="fact-num">10+</span><span class="fact-label" data-i18n="hero.fact1">Years Experience</span></li>
+          <li><span class="fact-num">CSC</span><span class="fact-label" data-i18n="hero.fact2">Running since 2016</span></li>
+          <li><span class="fact-num">AI</span><span class="fact-label" data-i18n="hero.fact3">Automation Tools</span></li>
         </ul>
       </div>
 
@@ -96,8 +98,8 @@
         <div class="photo-card">
           <img src="assets/photo.jpg" alt="Portrait of Ajendra Kumar Tandan" />
           <div class="photo-badges">
-            <span class="badge">📍 Raipur, Chhattisgarh</span>
-            <span class="badge badge-green">✅ Available for work</span>
+            <span class="badge" data-i18n="hero.badgeLoc">📍 Raipur, Chhattisgarh</span>
+            <span class="badge badge-green" data-i18n="hero.badgeAvail">✅ Available for work</span>
           </div>
         </div>
       </div>
@@ -107,45 +109,45 @@
   <!-- ===== About ===== -->
   <section class="section" id="about">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <p class="section-sub">A quick summary of who I am and what I do.</p>
+      <h2 class="section-title" data-i18n="about.title">About Me</h2>
+      <p class="section-sub" data-i18n="about.sub">A quick summary of who I am and what I do.</p>
 
       <div class="about-grid">
         <div class="card about-card">
-          <h3>Summary</h3>
-          <p>
+          <h3 data-i18n="about.hSummary">Summary</h3>
+          <p data-i18n="about.p1">
             Experienced <strong>Operations Professional</strong> with 10+ years in office assistance,
             computer operation and data management. Experienced in AI tools, clerical workflows,
             and leveraging automation tools to streamline day-to-day administrative support.
           </p>
-          <p>
+          <p data-i18n="about.p2">
             Alongside my job as a Computer Operator, I have run a <strong>Common Service Center (CSC)</strong>
             since 2016 — serving citizens with online government and digital services for 10+ years.
           </p>
         </div>
 
         <div class="card about-card">
-          <h3>Soft Skills</h3>
+          <h3 data-i18n="about.hSoft">Soft Skills</h3>
           <ul class="check-list">
-            <li>Ability to work in a team</li>
-            <li>Open to any challenging work</li>
-            <li>Ability to withstand any situation</li>
-            <li>Good analyzing and explanation capacity</li>
+            <li data-i18n="about.soft1">Ability to work in a team</li>
+            <li data-i18n="about.soft2">Open to any challenging work</li>
+            <li data-i18n="about.soft3">Ability to withstand any situation</li>
+            <li data-i18n="about.soft4">Good analyzing and explanation capacity</li>
           </ul>
-          <h3 class="mt">Activities &amp; Recognition</h3>
+          <h3 class="mt" data-i18n="about.hAct">Activities &amp; Recognition</h3>
           <ul class="check-list">
-            <li>Won high-school level essay competition</li>
-            <li>AICTE Short-Term Course — Writing Good Resumes &amp; Job Interviews</li>
-            <li>Workshop participation — Cyber Security Specialist</li>
+            <li data-i18n="about.act1">Won high-school level essay competition</li>
+            <li data-i18n="about.act2">AICTE Short-Term Course — Writing Good Resumes &amp; Job Interviews</li>
+            <li data-i18n="about.act3">Workshop participation — Cyber Security Specialist</li>
           </ul>
         </div>
 
         <div class="card about-card contact-mini">
-          <h3>Quick Contact</h3>
+          <h3 data-i18n="about.hQuick">Quick Contact</h3>
           <ul class="contact-list">
             <li>📞 <a href="tel:+919691888860">09691888860</a></li>
             <li>✉️ <a href="mailto:ajendratandan@gmail.com">ajendratandan@gmail.com</a></li>
-            <li>🏠 Village – Sirri, Post – Kanki, Thana – Kharora, Block – Tilda, District – Raipur, Chhattisgarh, Pin – 493225</li>
+            <li data-i18n="about.addr">🏠 Village – Sirri, Post – Kanki, Thana – Kharora, Block – Tilda, District – Raipur, Chhattisgarh, Pin – 493225</li>
           </ul>
         </div>
       </div>
@@ -155,8 +157,8 @@
   <!-- ===== Experience ===== -->
   <section class="section section-alt" id="experience">
     <div class="container">
-      <h2 class="section-title">Work Experience</h2>
-      <p class="section-sub">Roles I have held and the work I do every day.</p>
+      <h2 class="section-title" data-i18n="exp.title">Work Experience</h2>
+      <p class="section-sub" data-i18n="exp.sub">Roles I have held and the work I do every day.</p>
 
       <div class="timeline">
         <article class="timeline-item">
@@ -164,13 +166,13 @@
           <div class="card timeline-card">
             <div class="timeline-head">
               <div>
-                <h3>Computer Operator</h3>
+                <h3 data-i18n="exp.role1">Computer Operator</h3>
                 <p class="org">Primary Agricultural Co-Operative Society Beldarsivni, Raipur</p>
               </div>
-              <span class="chip chip-green">Nov 2025 – Present</span>
+              <span class="chip chip-green" data-i18n="exp.chip1">Nov 2025 – Present</span>
             </div>
-            <p class="muted">Duration: Nov 2025 onward (11 months)</p>
-            <p>
+            <p class="muted" data-i18n="exp.dur1">Duration: Nov 2025 onward (11 months)</p>
+            <p data-i18n="exp.desc1">
               Day-to-day computer operations, record keeping, data entry and office assistance
               for the society — maintaining digital records and supporting clerical workflows.
             </p>
@@ -182,13 +184,13 @@
           <div class="card timeline-card">
             <div class="timeline-head">
               <div>
-                <h3>Owner / Operator — Common Service Center (CSC)</h3>
-                <p class="org">Self-employed · Raipur, Chhattisgarh</p>
+                <h3 data-i18n="exp.role2">Owner / Operator — Common Service Center (CSC)</h3>
+                <p class="org" data-i18n="exp.org2">Self-employed · Raipur, Chhattisgarh</p>
               </div>
-              <span class="chip">2016 – Present · 10+ years</span>
+              <span class="chip" data-i18n="exp.chip2">2016 – Present · 10+ years</span>
             </div>
-            <p class="muted">Duration: 2016 onward (10+ years)</p>
-            <p>
+            <p class="muted" data-i18n="exp.dur2">Duration: 2016 onward (10+ years)</p>
+            <p data-i18n="exp.desc2">
               Running a CSC providing e-governance and digital services to citizens —
               online forms, documentation, printing, banking and government scheme support —
               while managing customers, records and daily operations independently.
@@ -197,7 +199,7 @@
         </article>
       </div>
 
-      <h3 class="sub-heading">Technical Training</h3>
+      <h3 class="sub-heading" data-i18n="exp.hTraining">Technical Training</h3>
       <div class="grid-2">
         <div class="card train-card">
           <div class="timeline-head">
@@ -205,22 +207,22 @@
               <h3>CSPDCL, Bilaspur</h3>
               <p class="org">Chhattisgarh State Power Distribution Company Limited</p>
             </div>
-            <span class="chip">Jul – Aug 2014</span>
+            <span class="chip" data-i18n="train.chip1">Jul – Aug 2014</span>
           </div>
-          <p><strong>Project Work:</strong> Billing &amp; Networking</p>
-          <p class="muted">19th July 2014 to 18th August 2014 (30 days)</p>
+          <p data-i18n="train.p1"><strong>Project Work:</strong> Billing &amp; Networking</p>
+          <p class="muted" data-i18n="train.d1">19th July 2014 to 18th August 2014 (30 days)</p>
         </div>
 
         <div class="card train-card">
           <div class="timeline-head">
             <div>
               <h3>Office of Collector &amp; District Magistrate, Bilaspur</h3>
-              <p class="org">Department of IT</p>
+              <p class="org" data-i18n="train.org2b">Department of IT</p>
             </div>
-            <span class="chip">Jun – Jul 2015</span>
+            <span class="chip" data-i18n="train.chip2">Jun – Jul 2015</span>
           </div>
-          <p><strong>Project Work:</strong> Chhattisgarh State Wide Area Network (CGSWAN)</p>
-          <p class="muted">5th June 2015 to 4th July 2015 (30 days)</p>
+          <p data-i18n="train.p2"><strong>Project Work:</strong> Chhattisgarh State Wide Area Network (CGSWAN)</p>
+          <p class="muted" data-i18n="train.d2">5th June 2015 to 4th July 2015 (30 days)</p>
         </div>
       </div>
     </div>
@@ -229,23 +231,23 @@
   <!-- ===== Skills ===== -->
   <section class="section" id="skills">
     <div class="container">
-      <h2 class="section-title">Skills &amp; Tools</h2>
-      <p class="section-sub">Everything I work with — office suites, web, AI, servers and more.</p>
+      <h2 class="section-title" data-i18n="skills.title">Skills &amp; Tools</h2>
+      <p class="section-sub" data-i18n="skills.sub">Everything I work with — office suites, web, AI, servers and more.</p>
 
       <div class="skills-grid">
         <div class="card skill-group">
-          <h3>🖥️ Office &amp; Data</h3>
+          <h3 data-i18n="skills.g1">🖥️ Office &amp; Data</h3>
           <div class="chips">
             <span class="tag">Excel</span><span class="tag">Word</span>
-            <span class="tag">Google Workspace</span><span class="tag">Data Management</span>
-            <span class="tag">Clerical Workflows</span>
+            <span class="tag">Google Workspace</span><span class="tag" data-i18n="skills.tData">Data Management</span>
+            <span class="tag" data-i18n="skills.tClerical">Clerical Workflows</span>
           </div>
         </div>
 
         <div class="card skill-group">
-          <h3>🤖 AI &amp; Automation</h3>
+          <h3 data-i18n="skills.g2">🤖 AI &amp; Automation</h3>
           <div class="chips">
-            <span class="tag">AI Automation</span><span class="tag">Browser Automation</span>
+            <span class="tag" data-i18n="skills.tAiAuto">AI Automation</span><span class="tag" data-i18n="skills.tBrowser">Browser Automation</span>
             <span class="tag">Claude</span><span class="tag">Codex</span>
             <span class="tag">Antigravity</span><span class="tag">OpenWork</span>
             <span class="tag">OpenCode</span><span class="tag">OpenDesign</span>
@@ -254,38 +256,38 @@
         </div>
 
         <div class="card skill-group">
-          <h3>🌐 Web &amp; Development</h3>
+          <h3 data-i18n="skills.g3">🌐 Web &amp; Development</h3>
           <div class="chips">
-            <span class="tag">Prototype Development</span><span class="tag">Vercel</span>
+            <span class="tag" data-i18n="skills.tProto">Prototype Development</span><span class="tag">Vercel</span>
             <span class="tag">V0</span><span class="tag">GitHub</span>
-            <span class="tag">CMS Management</span><span class="tag">WordPress</span>
-            <span class="tag">Database</span><span class="tag">Software Building</span>
+            <span class="tag" data-i18n="skills.tCms">CMS Management</span><span class="tag">WordPress</span>
+            <span class="tag" data-i18n="skills.tDb">Database</span><span class="tag" data-i18n="skills.tSw">Software Building</span>
             <span class="tag">Android Studio</span>
           </div>
         </div>
 
         <div class="card skill-group">
-          <h3>📣 Digital Marketing</h3>
+          <h3 data-i18n="skills.g4">📣 Digital Marketing</h3>
           <div class="chips">
-            <span class="tag">Digital Marketing</span><span class="tag">Social Media Management</span>
-            <span class="tag">SEO Optimization</span>
+            <span class="tag" data-i18n="skills.tDm">Digital Marketing</span><span class="tag" data-i18n="skills.tSm">Social Media Management</span>
+            <span class="tag" data-i18n="skills.tSeo">SEO Optimization</span>
           </div>
         </div>
 
         <div class="card skill-group">
-          <h3>⚙️ Servers &amp; Hosting</h3>
+          <h3 data-i18n="skills.g5">⚙️ Servers &amp; Hosting</h3>
           <div class="chips">
             <span class="tag">Wamp Server</span><span class="tag">Xampp Server</span>
-            <span class="tag">VPS Hosting</span>
+            <span class="tag" data-i18n="skills.tVps">VPS Hosting</span>
           </div>
         </div>
 
         <div class="card skill-group">
-          <h3>🚀 Startups &amp; Security</h3>
+          <h3 data-i18n="skills.g6">🚀 Startups &amp; Security</h3>
           <div class="chips">
-            <span class="tag">Startup Project Management</span>
-            <span class="tag">Startup Ecosystem / App Handling</span>
-            <span class="tag">Cyber Security Practices</span>
+            <span class="tag" data-i18n="skills.tSpm">Startup Project Management</span>
+            <span class="tag" data-i18n="skills.tSeco">Startup Ecosystem / App Handling</span>
+            <span class="tag" data-i18n="skills.tCyber">Cyber Security Practices</span>
           </div>
         </div>
       </div>
@@ -295,47 +297,47 @@
   <!-- ===== Projects ===== -->
   <section class="section section-alt" id="projects">
     <div class="container">
-      <h2 class="section-title">Projects &amp; Portfolio</h2>
-      <p class="section-sub">Selected academic projects and live work.</p>
+      <h2 class="section-title" data-i18n="proj.title">Projects &amp; Portfolio</h2>
+      <p class="section-sub" data-i18n="proj.sub">Selected academic projects and live work.</p>
 
       <div class="grid-3">
         <a class="card project-card" href="https://ajendra.vercel.app" target="_blank" rel="noopener">
-          <span class="project-kind">Live Website</span>
-          <h3>Personal Portfolio</h3>
-          <p>My existing portfolio website, hosted on Vercel.</p>
+          <span class="project-kind" data-i18n="proj.kind1">Live Website</span>
+          <h3 data-i18n="proj.h1">Personal Portfolio</h3>
+          <p data-i18n="proj.p1">My existing portfolio website, hosted on Vercel.</p>
           <span class="link-arrow">ajendra.vercel.app ↗</span>
         </a>
 
         <a class="card project-card" href="https://github.com/ajendratandan" target="_blank" rel="noopener">
           <span class="project-kind">GitHub</span>
-          <h3>Code &amp; Experiments</h3>
-          <p>Repositories, prototypes and open-source contributions.</p>
+          <h3 data-i18n="proj.h2">Code &amp; Experiments</h3>
+          <p data-i18n="proj.p2">Repositories, prototypes and open-source contributions.</p>
           <span class="link-arrow">github.com/ajendratandan ↗</span>
         </a>
 
         <div class="card project-card">
-          <span class="project-kind">Software</span>
-          <h3>Data Entry Automation Software</h3>
-          <p>Tooling to automate repetitive data-entry tasks and reduce manual effort.</p>
-          <span class="link-arrow muted-arrow">Ask me for a demo</span>
+          <span class="project-kind" data-i18n="proj.kind3">Software</span>
+          <h3 data-i18n="proj.h3">Data Entry Automation Software</h3>
+          <p data-i18n="proj.p3">Tooling to automate repetitive data-entry tasks and reduce manual effort.</p>
+          <span class="link-arrow muted-arrow" data-i18n="proj.ask">Ask me for a demo</span>
         </div>
 
         <div class="card project-card">
-          <span class="project-kind">Major Project</span>
-          <h3>SMS Using Communication Protocol</h3>
-          <p>An SMS gateway that lets a computer send/receive SMS over a telecom network, with media conversion from email and other formats.</p>
+          <span class="project-kind" data-i18n="proj.kind4">Major Project</span>
+          <h3 data-i18n="proj.h4">SMS Using Communication Protocol</h3>
+          <p data-i18n="proj.p4">An SMS gateway that lets a computer send/receive SMS over a telecom network, with media conversion from email and other formats.</p>
         </div>
 
         <div class="card project-card">
-          <span class="project-kind">Minor Project</span>
-          <h3>Business Model for Cloud Computing</h3>
-          <p>A cloud business model based on separate encryption/decryption services — storage authorization and key services vested with two different providers.</p>
+          <span class="project-kind" data-i18n="proj.kind5">Minor Project</span>
+          <h3 data-i18n="proj.h5">Business Model for Cloud Computing</h3>
+          <p data-i18n="proj.p5">A cloud business model based on separate encryption/decryption services — storage authorization and key services vested with two different providers.</p>
         </div>
 
         <div class="card project-card">
-          <span class="project-kind">Project</span>
-          <h3>Crime Records Management System</h3>
-          <p>System to share information among police departments about record availability, supporting city-wide coordination.</p>
+          <span class="project-kind" data-i18n="proj.kind6">Project</span>
+          <h3 data-i18n="proj.h6">Crime Records Management System</h3>
+          <p data-i18n="proj.p6">System to share information among police departments about record availability, supporting city-wide coordination.</p>
         </div>
       </div>
     </div>
@@ -344,15 +346,15 @@
   <!-- ===== Contact ===== -->
   <section class="section section-contact" id="contact">
     <div class="container contact-inner">
-      <h2 class="section-title">Get In Touch</h2>
-      <p class="section-sub">Open to opportunities in operations, data management, admin support and automation.</p>
+      <h2 class="section-title" data-i18n="contact.title">Get In Touch</h2>
+      <p class="section-sub" data-i18n="contact.sub">Open to opportunities in operations, data management, admin support and automation.</p>
 
       <div class="contact-actions">
         <a class="btn btn-primary btn-lg" href="mailto:ajendratandan@gmail.com">✉️ ajendratandan@gmail.com</a>
         <a class="btn btn-ghost btn-lg" href="tel:+919691888860">📞 09691888860</a>
       </div>
 
-      <address class="contact-address">
+      <address class="contact-address" data-i18n="contact.addr">
         Village – Sirri, Post – Kanki, Thana – Kharora, Block – Tilda,<br />
         District – Raipur, Chhattisgarh, Pin – 493225
       </address>
@@ -362,15 +364,16 @@
   <!-- ===== Footer ===== -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>© <span id="year">2026</span> Ajendra Kumar Tandan · Raipur, Chhattisgarh</p>
+      <p>© <span id="year">2026</span> <span data-i18n="foot.by">Ajendra Kumar Tandan · Raipur, Chhattisgarh</span></p>
       <div class="footer-links">
-        <a href="https://ajendra.vercel.app" target="_blank" rel="noopener">Portfolio</a>
+        <a href="https://ajendra.vercel.app" target="_blank" rel="noopener" data-i18n="foot.portfolio">Portfolio</a>
         <a href="https://github.com/ajendratandan" target="_blank" rel="noopener">GitHub</a>
-        <a href="#top">Back to top ↑</a>
+        <a href="#top" data-i18n="foot.top">Back to top ↑</a>
       </div>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
