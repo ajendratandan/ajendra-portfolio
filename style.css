@@ -317,7 +317,8 @@ html[data-theme="dark"] .edu-table thead th { color: #0b1120; }
   .about-grid, .skills-grid, .grid-3 { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 720px) {
+/* Full nav needs ~1080px; collapse to the menu button earlier */
+@media (max-width: 1024px) {
   .nav {
     position: fixed; inset: var(--header-h) 0 auto 0;
     flex-direction: column; background: var(--surface);
@@ -328,7 +329,9 @@ html[data-theme="dark"] .edu-table thead th { color: #0b1120; }
   .nav a { padding: 12px 14px; font-size: 1rem; }
   .menu-btn { display: grid; }
   .hide-mobile { display: none; }
+}
 
+@media (max-width: 720px) {
   .about-grid, .skills-grid, .grid-2, .grid-3 { grid-template-columns: 1fr; }
   .section { padding: 54px 0; }
   .hero { padding: 48px 0 40px; }
@@ -464,4 +467,25 @@ html[data-theme="dark"] .edu-table thead th { color: #0b1120; }
 @media (max-width: 720px) {
   .footer-right { align-items: center; width: 100%; }
   .social-row { justify-content: center; }
+}
+
+/* ===== Mobile polish (≤720px) ===== */
+@media (max-width: 720px) {
+  /* iOS Safari zooms into inputs sized below 16px */
+  .wa-form input, .wa-form textarea { font-size: 16px; }
+
+  /* Full-width tap targets for contact / CTA buttons */
+  .contact-actions { gap: 10px; }
+  .contact-actions .btn { width: 100%; max-width: 360px; margin-inline: auto; }
+
+  /* Bigger tap targets for footer social icons */
+  .social-ico { width: 40px; height: 40px; }
+  .social-ico img { width: 18px; height: 18px; }
+
+  /* Keep the floating WhatsApp pill from covering footer links */
+  .site-footer { padding-bottom: 78px; }
+
+  /* Tighter section rhythm on small screens */
+  .section-sub { margin-bottom: 26px; }
+  .card { padding: 18px; }
 }
