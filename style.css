@@ -559,3 +559,13 @@ a.project-card:hover {
 @media (prefers-reduced-motion: reduce) {
   .ai-ticker-track { animation: none; }
 }
+
+/* ===== Large desktop (≥1400px): use more of the screen ===== */
+@media (min-width: 1400px) {
+  .container { width: min(1240px, 92%); }
+  .hero-inner { gap: 64px; }
+  .hero h1 { font-size: clamp(2.1rem, 4.5vw, 3.6rem); }
+  .hero-lead { font-size: 1.06rem; }
+  .section { padding: 84px 0; }
+  .stat-num { font-size: 2.2rem; }
+}
