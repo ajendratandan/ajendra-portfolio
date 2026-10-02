@@ -526,5 +526,36 @@ a.project-card:hover {
 .share-btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
 
 @media print {
-  .to-top, .share-row { display: none !important; }
+  .to-top, .share-row, .ai-ticker { display: none !important; }
+}
+
+/* ===== AI ticker ===== */
+.ai-ticker {
+  overflow: hidden;
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 11px 0;
+}
+.ai-ticker-track {
+  display: flex;
+  gap: 44px;
+  width: max-content;
+  white-space: nowrap;
+  padding-right: 44px;
+  animation: ai-ticker-scroll 36s linear infinite;
+}
+.ai-ticker span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+}
+@keyframes ai-ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ai-ticker-track { animation: none; }
 }
