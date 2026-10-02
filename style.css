@@ -37,6 +37,12 @@ html[data-theme="dark"] {
 
 html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 12px); }
 
+/* Jump to anchors instantly for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn, .card, .svc-card, .to-top, .social-ico { transition: none; }
+}
+
 body {
   font-family: "Inter", "Noto Sans Devanagari", system-ui, -apple-system, "Segoe UI", sans-serif;
   background: var(--bg);
@@ -161,7 +167,7 @@ html[data-theme="dark"] .btn-primary { color: #0b1120; }
   width: min(320px, 100%); text-align: center;
 }
 .photo-card img {
-  width: 100%; border-radius: 14px; aspect-ratio: 3 / 4; object-fit: cover;
+  width: 100%; height: auto; border-radius: 14px; aspect-ratio: 3 / 4; object-fit: cover;
 }
 .photo-badges { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
 .badge {
@@ -463,4 +469,56 @@ a.project-card:hover {
   /* Tighter section rhythm on small screens */
   .section-sub { margin-bottom: 26px; }
   .card { padding: 18px; }
+}
+
+/* ===== FAQ ===== */
+.faq-list { display: grid; gap: 12px; max-width: 820px; }
+.faq-item {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 0 20px; box-shadow: var(--shadow-sm);
+  transition: border-color 0.15s;
+}
+.faq-item[open] { border-color: color-mix(in srgb, var(--accent) 45%, var(--border)); }
+.faq-item summary {
+  cursor: pointer; font-weight: 600; font-size: 1rem; color: var(--text);
+  padding: 15px 0; list-style: none;
+  display: flex; justify-content: space-between; align-items: center; gap: 14px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+"; color: var(--accent); font-size: 1.35rem; font-weight: 700;
+  line-height: 1; flex: none; transition: transform 0.18s;
+}
+.faq-item[open] summary::after { content: "\2212"; }
+.faq-item p { padding: 0 0 15px; color: var(--text-soft); font-size: 0.96rem; }
+
+/* ===== Back to top ===== */
+.to-top {
+  position: fixed; left: 16px; bottom: 16px; z-index: 60;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--border); background: var(--surface);
+  color: var(--accent); font-size: 1.2rem; font-weight: 700; cursor: pointer;
+  box-shadow: var(--shadow); display: grid; place-items: center;
+  opacity: 0; visibility: hidden; transform: translateY(8px); transition: 0.2s;
+}
+.to-top.show { opacity: 1; visibility: visible; transform: none; }
+.to-top:hover { border-color: var(--accent); }
+
+/* ===== Share row (blog articles) ===== */
+.share-row {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+  margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border);
+}
+.share-label { font-size: 0.9rem; font-weight: 700; color: var(--muted); }
+.share-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.88rem; font-weight: 600; color: var(--text-soft);
+  background: var(--bg-alt); border: 1px solid var(--border);
+  border-radius: 999px; padding: 8px 16px; cursor: pointer;
+  font-family: inherit; transition: 0.15s;
+}
+.share-btn:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+@media print {
+  .to-top, .share-row { display: none !important; }
 }

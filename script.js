@@ -80,3 +80,12 @@ if (waForm) {
     window.open(url, "_blank", "noopener");
   });
 }
+
+// ===== Back to top =====
+const toTop = document.getElementById("toTop");
+if (toTop) {
+  const syncToTop = () => toTop.classList.toggle("show", window.scrollY > 500);
+  window.addEventListener("scroll", syncToTop, { passive: true });
+  syncToTop();
+  toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+}

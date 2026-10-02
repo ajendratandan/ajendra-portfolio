@@ -1,0 +1,19 @@
+{
+  "name": "Ajendra Kumar Tandan — Portfolio",
+  "short_name": "AK Tandan",
+  "description": "Operations Professional, Computer Operator & AI Automation — Raipur, Chhattisgarh",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
