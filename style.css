@@ -563,9 +563,10 @@ a.project-card:hover {
 /* ===== Large desktop (≥1400px): use more of the screen ===== */
 @media (min-width: 1400px) {
   .container { width: min(1240px, 92%); }
-  .hero-inner { gap: 64px; }
+  .hero-inner { grid-template-columns: 1fr 380px; gap: 64px; }
+  .photo-card { width: 100%; }
   .hero h1 { font-size: clamp(2.1rem, 4.5vw, 3.6rem); }
   .hero-lead { font-size: 1.06rem; }
   .section { padding: 84px 0; }
-  .stat-num { font-size: 2.2rem; }
+  .stat-num { font-size: 2.35rem; }
 }
