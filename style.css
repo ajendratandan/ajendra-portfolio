@@ -273,20 +273,6 @@ a.project-card:hover {
 .link-arrow { font-weight: 600; font-size: 0.9rem; color: var(--accent); }
 .muted-arrow { color: var(--muted); }
 
-/* ===== Education table ===== */
-.table-wrap { padding: 0; overflow-x: auto; }
-.edu-table { width: 100%; border-collapse: collapse; min-width: 640px; }
-.edu-table th, .edu-table td { padding: 14px 16px; text-align: left; font-size: 0.94rem; }
-.edu-table thead th {
-  background: var(--accent); color: #fff; font-weight: 600;
-  font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em;
-}
-html[data-theme="dark"] .edu-table thead th { color: #0b1120; }
-.edu-table tbody tr { border-bottom: 1px solid var(--border); }
-.edu-table tbody tr:last-child { border-bottom: none; }
-.edu-table tbody tr:nth-child(even) { background: color-mix(in srgb, var(--bg-alt) 60%, transparent); }
-.edu-table td { color: var(--text-soft); }
-
 /* ===== Contact ===== */
 .section-contact {
   background:
@@ -336,17 +322,6 @@ html[data-theme="dark"] .edu-table thead th { color: #0b1120; }
   .section { padding: 54px 0; }
   .hero { padding: 48px 0 40px; }
   .hero-facts { gap: 20px; }
-
-  /* stacked education table */
-  .edu-table { min-width: 0; }
-  .edu-table thead { display: none; }
-  .edu-table tr { display: block; padding: 12px 4px; border-bottom: 1px solid var(--border); }
-  .edu-table td { display: flex; justify-content: space-between; gap: 16px; padding: 6px 12px; text-align: right; }
-  .edu-table td::before {
-    content: attr(data-label); font-weight: 700; color: var(--text);
-    text-align: left; flex-shrink: 0;
-  }
-  .table-wrap { overflow-x: visible; }
 }
 
 /* ===== Print (resume-friendly) ===== */
