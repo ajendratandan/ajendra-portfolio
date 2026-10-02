@@ -260,6 +260,12 @@ html[data-theme="dark"] .btn-primary { color: #0b1120; }
 .svc-card { border-top: 3px solid var(--accent); transition: 0.18s; }
 .svc-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
 .svc-card h3 { font-size: 1.02rem; margin-bottom: 8px; }
+.svc-chip {
+  display: inline-block; margin: -3px 0 8px; padding: 3px 10px;
+  font-size: 0.72rem; font-weight: 700;
+  background: var(--green-soft); color: var(--green);
+  border-radius: 999px;
+}
 .svc-card p { color: var(--text-soft); font-size: 0.93rem; }
 
 /* ===== Projects ===== */
